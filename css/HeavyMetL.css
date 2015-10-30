@@ -1,0 +1,160 @@
+#HeavyMetL {
+ display: block;
+ margin-top: 10px;
+ margin-left: 10px;
+ margin-right: 10px;
+ margin-bottom: 10px;
+ position: absolute;
+ top: 0; left: 0; bottom: 0; right: 0;
+ font-family: Calibri;
+}
+
+#HeavyMetL > div {
+ box-shadow: 
+     1px 0 0 0 #888 inset, 
+     0 1px 0 0 #888 inset,
+     0 0 1px 0 #888 inset, 
+     0 0 0 1px #888 inset;
+}
+
+#HeavyMetL > #input-pane {
+ position: absolute;
+ top: 0; left: 0;
+ height: 30px;
+ width: 395px;
+}
+
+#HeavyMetL > #proteins-pane {
+ position: absolute;
+ top: 40; left: 0; bottom: 0;
+ width: 395;
+}
+
+#HeavyMetL > #proteins-pane > #proteins-table-container {
+ overflow: scroll;
+ position: absolute;
+ top: 0; left: 0; bottom: 30; right: 0;
+}
+
+#HeavyMetL > #proteins-pane > #proteins-table-container table {
+ border-collapse: collapse;
+}
+
+#HeavyMetL > #proteins-pane > #proteins-table-container table td {
+ padding-left: 5px;
+ cursor: pointer;
+}
+
+#HeavyMetL > #proteins-pane > #proteins-table-container table table td {
+ padding-left: 20px;
+}
+
+#HeavyMetL > #proteins-pane > #proteins-table-container table table td.selected {
+ background-color: lightblue;
+ box-shadow: 
+    3px 0 0 0 blue inset, 
+    0 3px 0 0 blue inset,
+    0 0 3px 0 blue inset, 
+    0 0 0 3px blue inset;
+}
+
+#HeavyMetL > #proteins-pane > #proteins-processing {
+ position: absolute;
+ left: 0; bottom: 0; right: 0;
+ height: 30;
+}
+
+#HeavyMetL > #graphics-pane {
+ position: absolute;
+ top: 0; left: 400; bottom: 0; right: 0;
+}
+
+#HeavyMetL > #graphics-pane > #file-tab-list {
+ position: absolute;
+ top: 0; left: 0; right: 0;
+ height: 30;
+}
+
+#HeavyMetL > #graphics-pane > #file-tab-list > a {
+ background-color: pink;
+ padding-left: 5px;
+ padding-right: 5px;
+ padding-top: 5px;
+ height: 20px;
+ margin-left: 5px;
+ margin-top: 5px;
+ margin-bottom: 0px;
+ float: left;
+ cursor: pointer;
+}
+
+#HeavyMetL > #graphics-pane > #file-tab-list > a.selected {
+ box-shadow: 
+    3px 0 0 0 blue inset, 
+    0 3px 0 0 blue inset,
+    0 0 3px 0 blue inset, 
+    0 0 0 3px blue inset;
+}
+
+#HeavyMetL > #graphics-pane > #graphics-canvas-container {
+ position: absolute;
+ top: 32; left: 2; bottom: 32; right: 2;
+}
+
+#HeavyMetL > #graphics-pane > #graphics-downloads {
+ position: absolute;
+ left: 0; bottom: 0; right: 0;
+ height: 30;
+}
+
+#HeavyMetL > #input-pane > a,
+#HeavyMetL > #proteins-pane > #proteins-processing > a, 
+#HeavyMetL > #graphics-pane > #graphics-downloads > a,
+#HeavyMetL > #settings-pane-overlay > #settings-pane > a {
+ background-color: darkgrey;
+ padding-left: 5px;
+ padding-right: 5px;
+ height: 20px;
+ margin-left: 5px;
+ margin-top: 5px;
+ margin-bottom: 5px;
+ float: left;
+ cursor: pointer;
+}
+
+#HeavyMetL > #proteins-pane > #proteins-processing > a.disabled {
+ background-color: lightgrey;
+ color: white;
+}
+
+#HeavyMetL > #settings-pane-overlay {
+ position: absolute;
+ top: 0; left: 0; bottom: 0; right: 0;
+ visibility: hidden;
+ background-color: white; 
+ opacity: 0.9;
+}
+
+#HeavyMetL > #settings-pane {
+ position: absolute;
+ top: 50; left: 50; bottom: 50; right: 50;
+}
+
+#HeavyMetL > #progress-overlay {
+ position: absolute;
+ top: 0; left: 0; bottom: 0; right: 0;
+ visibility: hidden;
+ background-color: white; 
+ opacity: 0.9;
+}
+#HeavyMetL > #progress-overlay > #progress-container {
+ position: absolute;
+ top: 50%; left: 25%; right: 25%;
+ margin-top: -15px;
+}
+#HeavyMetL > #progress-overlay > #progress-container > #progress-bar {
+ background-color: lightgrey; 
+ height: 30px;
+ width: 100%;
+ text-align: center;
+}
