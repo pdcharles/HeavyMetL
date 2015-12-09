@@ -1,14 +1,12 @@
-if (typeof HML == 'undefined') {
- HML = {};
-}
+if (typeof HML == 'undefined') HML = {};
 
 HML.Config = {
- Modifications  : {
-  Carbamidomethyl : {
-                      Carbon  : 2,
-                      Hydrogen: 3,
-                      Nitrogen: 1,
-                      Oxygen  : 1
-                    }
- }
+// FixedMods  : {
+//  C : "Carbamidomethyl",
+// },
+ PpmError : "20",
+ RTSearchWindow  : "3",
+ RTMaxShift  : "0.1",
+ RTOrder  : "-1",
 }
+
