@@ -25,6 +25,7 @@
  <script src="lib/HML/Plot/Plot.js"></script>
  <!-- config -->
  <script src="cfg/config.js"></script>
+ <script src="cfg/modifications.js"></script>
  <!-- style -->
  <link rel="stylesheet" href="css/HeavyMetL.css" />
  <!-- favicon -->
@@ -34,35 +35,50 @@
  <div id="HeavyMetL">
 
   <div id="input-pane">
-   <a id="input-identifications">Identifications</a>
-   <a id="input-raw-files">Raw Files</a>
-   <a id="input-settings">Settings</a>
+   <div id="input">
+    <a id="input-raw-files">Raw Files</a>
+    <a id="input-identifications">Identifications</a>
+    <a id="input-settings">Settings</a>
+   </div>
+   <div id="file-tab-list">
+   </div>
   </div>
 
-  <div id="proteins-pane">
-   <div id="proteins-table-container">
-    <table id="proteins-table"></table>
-   </div>
-   <div id="proteins-processing">
-    <a id="process-all">Process All</a>
-    <a id="process-selected">Process Selected</a>
+  <div id="protein-pane">
+   <div id="protein-table-container">
+    <table id="protein-table"></table>
    </div>
   </div>
 
   <div id="graphics-pane">
-   <div id="file-tab-list">
-   </div>
    <div id="graphics-canvas-container">
     <canvas id="graphics-canvas" />
    </div>
-   <div id="graphics-downloads">
+  </div>
+
+  <div id="processing-pane">
+   <div id="processing">
+    <a id="process-all">Process All</a>
+    <a id="process-selected">Process Selected</a>
+   </div>
+  </div>
+  <div id="results-pane">
+   <div id="graphics">
     <a id="save-as-png">Save as PNG</a>
     <a id="save-as-svg">Save as SVG</a>
+   </div>
+   <div id="canvas-bottom-border">
+   </div>
+   <div id="results">
+    <a id="download-proteins">Download Proteins</a>
+    <a id="download-peptides">Download Peptides</a>
    </div>
   </div>
 
   <div id="settings-pane-overlay">
    <div id="settings-pane">
+    <div id="settings-contents">
+    </div>
     <a id="settings-close">Close</a>
    </div>
   </div>
