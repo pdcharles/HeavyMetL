@@ -6,5 +6,8 @@ HML.Modifications = {
                       Hydrogen: 3,
                       Nitrogen: 1,
                       Oxygen  : 1,
+                    },
+  Oxidation       : {
+                      Oxygen  : 1,
                     }
 }

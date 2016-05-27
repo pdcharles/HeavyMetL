@@ -9,160 +9,124 @@
  font-family: Calibri;
 }
 
-#HeavyMetL > #input-pane {
- position: absolute;
- left: 0; top: 0; right: 0;
- height: 35px;
-}
-#HeavyMetL > #input-pane > #input {
- position: absolute;
- left: 0, top: 0;
- height: 30px;
- padding-right: 5px;
-}
-#HeavyMetL > #input-pane > #file-tab-list {
- position: absolute;
- top: 0; left: 400; right: 0;
- height: 35;
-}
-#HeavyMetL > #input-pane > #file-tab-list > a {
- padding-left: 5px;
- padding-right: 5px;
- padding-top: 5px;
- height: 20px;
- margin-left: 5px;
- margin-top: 5px;
- margin-bottom: 0px;
- float: left;
- cursor: pointer;
-}
-#HeavyMetL > #protein-pane {
- position: absolute;
- top: 35; left: 0; bottom: 35;
- width: 395;
-}
-#HeavyMetL > #protein-pane > #protein-table-container {
- overflow: scroll;
- position: absolute;
- top: 0; left: 0; bottom: 0; right: 0;
-}
-#HeavyMetL > #protein-pane > #protein-table-container table {
- border-collapse: collapse;
-}
-#HeavyMetL > #protein-pane > #protein-table-container table td {
- padding-left: 5px;
- cursor: pointer;
-}
-#HeavyMetL > #protein-pane > #protein-table-container table table td {
- padding-left: 20px;
-}
-#HeavyMetL > #graphics-pane {
- position: absolute;
- top: 35; left: 400; bottom: 36; right: 0;
-}
-#HeavyMetL > #graphics-pane > #graphics-canvas-container {
- position: absolute;
- top: 32; left: 2; bottom: 31; right: 2;
-}
-#HeavyMetL > #processing-pane {
- position: absolute;
- left: 0; bottom: 0; right: 0;
- height: 35px;
-}
-#HeavyMetL > #processing-pane > #processing {
- position: absolute;
- left: 0; bottom: 0;
- height: 30px;
- padding-right: 5px;
-}
+#HeavyMetL > #control-pane,
+#HeavyMetL > #file-pane,
 #HeavyMetL > #results-pane {
- position: absolute;
- left: 400px; bottom: 0; right: 0;
- height: 36px;
-}
-#HeavyMetL > #results-pane > #results {
- position: absolute;
- left: 0px; bottom: 0;
- height: 30px;
- padding-right: 5px;
-}
-#HeavyMetL > #results-pane > #graphics {
- float: right;
- height: 30px;
- padding-top: 6px;
- padding-right: 5px;
-}
-#HeavyMetL > #results-pane > #canvas-bottom-border {
- height: 36px; 
- box-shadow: 0 1px 0 0 #888 inset;
- overflow:hidden;
-}
-#HeavyMetL > #settings-pane-overlay {
- position: absolute;
- top: 0; left: 0; bottom: 0; right: 0;
- visibility: hidden;
-}
-#HeavyMetL > #settings-pane {
- position: absolute;
- top: 50; left: 50; bottom: 50; right: 50;
-}
-#HeavyMetL > #progress-overlay {
- position: absolute;
- top: 0; left: 0; bottom: 0; right: 0;
- visibility: hidden;
-}
-#HeavyMetL > #progress-overlay > #progress-container {
- position: absolute;
- top: 50%; left: 25%; right: 25%;
- margin-top: -15px;
-}
-#HeavyMetL > #progress-overlay > #progress-container > #progress-bar {
- height: 30px;
- width: 100%;
- text-align: center;
- line-height: 30px;
-}
-
-
-
-
-
-#HeavyMetL > #input-pane > #input,
-#HeavyMetL > #protein-pane,
-#HeavyMetL > #processing-pane > #processing,
-#HeavyMetL > #results-pane > #results {
  box-shadow: 
      1px 0 0 0 #888 inset, 
      0 1px 0 0 #888 inset,
      -1px 0 0 0 #888 inset,
      0 -1px 0 0 #888 inset;
 }
-#HeavyMetL > #input-pane > #file-tab-list {
- box-shadow:
-     1px 0 0 0 #888 inset,
-     -1px 0 0 0 #888 inset,
-     0 1px 0 0 #888 inset;
+
+#HeavyMetL > #control-pane {
+ position: absolute;
+ left: 0; top: 0; right: 0;
+ height: 30px;
 }
-#HeavyMetL > #graphics-pane {
- box-shadow:
-     1px 0 0 0 #888 inset,
-     -1px 0 0 0 #888 inset;
+#HeavyMetL > #control-pane > div {
+ float: left;
+ height: 30px;
+ padding-right: 20px;
 }
-#HeavyMetL > #results-pane > #canvas-bottom-border {
- box-shadow:
-     0 1px 0 0 #888 inset;
+
+#HeavyMetL > #file-pane {
+ position: absolute;
+ left: 0; top: 35; bottom: 0;
+ width: 295px;
 }
-#HeavyMetL > #results-pane > #graphics {
- box-shadow: 
-     1px 0 0 0 #888 inset,
-     -1px 0 0 0 #888 inset,
-     0 -1px 0 0 #888 inset; 
+#HeavyMetL > #file-pane > #file-tab-list {
+ position: absolute;
+ left: 0; top: 0; bottom: 0; right: 0;
+ padding: 0px;
 }
-#HeavyMetL > #input-pane > #input > a,
-#HeavyMetL > #processing-pane > div > a,
-#HeavyMetL > #results-pane > div > a,
-#HeavyMetL > #settings-pane-overlay > #settings-pane > a {
- background-color: darkgrey;
+#HeavyMetL > #file-pane > #file-tab-list > a {
+ padding-left: 5px;
+ padding-right: 5px;
+ padding-top: 5px;
+ height: 40px;
+ margin-left: 5px;
+ margin-top: 5px;
+ margin-bottom: 0px;
+ cursor: pointer;
+ width: 275px;
+ font-size: 10pt;
+ overflow: hidden;
+ word-wrap: break-word;
+ display:block;
+}
+
+#HeavyMetL > #results-pane {
+ position: absolute;
+ top: 35; left: 300; bottom: 0; right:0;
+}
+#HeavyMetL > #results-pane > #results-table-container {
+ overflow: scroll;
+ position: absolute;
+ top: 0; left: 0; bottom: 0; right: 0;
+}
+#HeavyMetL > #results-pane > #results-table-container > p {
+ margin-top: 25%;
+ text-align: center;
+}
+#HeavyMetL > #results-pane > #results-table-container > table {
+ border-collapse: collapse;
+}
+#HeavyMetL > #results-pane > #results-table-container > table td {
+ padding-left: 5px;
+ cursor: pointer;
+ border: 1px solid black;
+}
+#HeavyMetL > #results-pane > #results-table-container > table > th > td {
+ font-weight: bold;
+}
+
+#HeavyMetL > #graphics-pane-overlay {
+ position: absolute;
+ top: 0; left: 0; bottom: 0; right: 0;
+ visibility: hidden;
+ background: white; 
+}
+#HeavyMetL > #graphics-pane-overlay > #graphics-canvas-container {
+ position: absolute;
+ top: 35; left: 0; bottom: 0; right: 0;
+}
+
+#HeavyMetL > #settings-pane-overlay {
+ position: absolute;
+ top: 0; left: 0; bottom: 0; right: 0;
+ visibility: hidden;
+ background: white; 
+}
+#HeavyMetL > #settings-pane {
+ position: absolute;
+ top: 50; left: 50; bottom: 50; right: 50;
+}
+
+#HeavyMetL > #progress-pane-overlay {
+ position: absolute;
+ top: 0; left: 0; bottom: 0; right: 0;
+ visibility: hidden;
+ background: white; 
+ opacity: 0.9;
+}
+#HeavyMetL > #progress-pane-overlay > #progress-container {
+ position: absolute;
+ top: 50%; left: 25%; right: 25%;
+ margin-top: -15px;
+}
+#HeavyMetL > #progress-pane-overlay > #progress-container > #progress-bar {
+ height: 30px;
+ width: 100%;
+ text-align: center;
+ line-height: 30px;
+ background: lightgrey; 
+}
+
+#HeavyMetL > #control-pane > div > a,
+#HeavyMetL > #graphics-pane-overlay > div > a,
+#HeavyMetL > #settings-pane-overlay > div > a {
+ background: darkgrey;
  padding-left: 5px;
  padding-right: 5px;
  height: 20px;
@@ -177,39 +141,28 @@
  -webkit-user-select: none;
  -ms-user-select: none;
 }
-#HeavyMetL > #input-pane > #input > a.disabled,
-#HeavyMetL > #processing-pane > div > a.disabled,
-#HeavyMetL > #results-pane > div > a.disabled, 
-#HeavyMetL > #settings-pane-overlay > #settings-pane > a.disabled {
+#HeavyMetL > #control-pane > div > a.disabled {
  cursor: not-allowed;
- background-color: lightgrey;
+ background: lightgrey;
  color: white;
 }
-#HeavyMetL > #input-pane > #file-tab-list > a {
- background-color: pink;
+#HeavyMetL > #file-pane > #file-tab-list > a {
+ background: pink;
 }
-#HeavyMetL > #input-pane > #file-tab-list > a.disabled {
- opacity : 0.6;
+#HeavyMetL > #file-pane > #file-tab-list > a.disabled {
+ opacity : 0.4;
 }
-#HeavyMetL > #input-pane > #file-tab-list > a.ready {
- background-color: lightgreen;
+#HeavyMetL > #file-pane > #file-tab-list > a.ready {
+ background: lightgreen;
 }
-#HeavyMetL > #input-pane > #file-tab-list > a.selected,
-#HeavyMetL > #protein-pane > #protein-table-container table table td.selected {
- background-color: lightblue !important;
+#HeavyMetL > #file-pane > #file-tab-list > a.has-rt {
+ background: linear-gradient(90deg, lightgreen 90%, lightblue 1%, lightblue 9%) !important;
+}
+#HeavyMetL > #file-pane > #file-tab-list > a.selected,
+#HeavyMetL > #results-pane > #results-table-container > table > tbody > tr.selected {
  box-shadow: 
     3px 0 0 0 blue inset, 
     0 3px 0 0 blue inset,
     -3px 0 0 0 blue inset, 
     0 -3px 0 0 blue inset;
-}
-#HeavyMetL > #settings-pane-overlay {
- background-color: white; 
-}
-#HeavyMetL > #progress-overlay {
- background-color: white;
- opacity: 0.9;
-}
-#HeavyMetL > #progress-overlay > #progress-container > #progress-bar {
- background-color: lightgrey; 
 }

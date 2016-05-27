@@ -32,44 +32,40 @@
 <body>
  <div id="HeavyMetL">
 
-  <div id="input-pane">
+  <div id="control-pane">
    <div id="input">
     <a id="input-raw-files">Raw Files</a>
     <a id="input-identifications">Identifications</a>
     <a id="input-settings">Settings</a>
    </div>
-   <div id="file-tab-list">
-   </div>
-  </div>
-
-  <div id="protein-pane">
-   <div id="protein-table-container">
-    <table id="protein-table"></table>
-   </div>
-  </div>
-
-  <div id="graphics-pane">
-   <div id="graphics-canvas-container">
-    <canvas id="graphics-canvas" />
-   </div>
-  </div>
-
-  <div id="processing-pane">
    <div id="processing">
     <a id="process-all">Process All</a>
     <a id="process-selected">Process Selected</a>
    </div>
-  </div>
-  <div id="results-pane">
-   <div id="graphics">
-    <a id="save-as-png">Save as PNG</a>
-    <a id="save-as-svg">Save as SVG</a>
-   </div>
-   <div id="canvas-bottom-border">
-   </div>
-   <div id="results">
+   <div id="download">
     <a id="download-proteins">Download Proteins</a>
     <a id="download-peptides">Download Peptides</a>
+   </div>
+  </div>
+
+  <div id="file-pane">
+   <div id="file-tab-list">
+   </div>
+  </div>
+
+  <div id="results-pane"> 
+   <div id="results-table-container">
+   </div>
+  </div>
+
+  <div id="graphics-pane-overlay">
+   <div id="graphics-canvas-container">
+    <canvas id="graphics-canvas" />
+   </div>
+   <div id="graphics-control-pane">
+    <a id="save-as-png">Save as PNG</a>
+    <a id="save-as-svg">Save as SVG</a>
+    <a id="graphics-close">Close</a>
    </div>
   </div>
 
@@ -81,7 +77,7 @@
    </div>
   </div>
 
-  <div id="progress-overlay">
+  <div id="progress-pane-overlay">
    <div id="progress-container">
     <div id="progress-bar">
     </div>
