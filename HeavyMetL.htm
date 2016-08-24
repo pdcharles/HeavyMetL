@@ -2,11 +2,9 @@
 <head>
  <title>HeavyMetL</title>
  <meta charset="UTF-8" />
- <!-- http://fabricjs.com/ -->
  <script src="lib/distrib/fabric/fabric-1.5.0.min.js"></script>
  <!-- MSLIB -->
- <!-- https://github.com/richardassar/zpipe -->
- <script src="lib/mslib/distrib/zlib/zpipe.full.js"></script>
+ <script src="lib/mslib/distrib/zlib/pako_inflate.min.js"></script>
  <script src="lib/mslib/MSLIB/Common.js"></script>
  <script src="lib/mslib/MSLIB/IsoCalc.js"></script>
  <script src="lib/mslib/MSLIB/Math.js"></script>
@@ -18,8 +16,9 @@
  <script src="lib/mslib/MSLIB/Format/ThermoRawFile.js"></script>
  <script src="lib/mslib/MSLIB/Format/TextTableFile.js"></script>
  <!-- core -->
- <script src="lib/core/HML/Quantifier.js"></script>
  <script src="lib/core/HML/Interface.js"></script>
+ <script src="lib/core/HML/MsDataFileWorker.js"></script>
+ <script src="lib/core/HML/QuantitationWorker.js"></script>
  <script src="lib/core/HML/Plot.js"></script>
  <!-- config -->
  <script src="cfg/config.js"></script>
@@ -30,6 +29,9 @@
  <link rel="icon" href="img/favicon.png" type="image/png" />
 </head>
 <body>
+ <!--
+ <input type="file" id="test">test</input>
+ -->
  <div id="HeavyMetL">
 
   <div id="control-pane">
@@ -73,7 +75,8 @@
    <div id="settings-pane">
     <div id="settings-contents">
     </div>
-    <a id="settings-close">Close</a>
+    <a id="settings-cancel">Cancel</a>
+    <a id="settings-update">Update Settings & Clear Results</a>
    </div>
   </div>
 

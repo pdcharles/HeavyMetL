@@ -23,6 +23,7 @@
  position: absolute;
  left: 0; top: 0; right: 0;
  height: 30px;
+ overflow: scroll;
 }
 #HeavyMetL > #control-pane > div {
  float: left;
@@ -71,14 +72,20 @@
 }
 #HeavyMetL > #results-pane > #results-table-container > table {
  border-collapse: collapse;
+ font-size: smaller;
 }
 #HeavyMetL > #results-pane > #results-table-container > table td {
  padding-left: 5px;
  cursor: pointer;
  border: 1px solid black;
+ white-space: nowrap;
 }
 #HeavyMetL > #results-pane > #results-table-container > table > th > td {
  font-weight: bold;
+}
+#HeavyMetL > #results-pane > #results-table-container > table tr > td:nth-child(2) {
+ max-width: 400px;
+ overflow: hidden;
 }
 
 #HeavyMetL > #graphics-pane-overlay {
@@ -112,7 +119,7 @@
 }
 #HeavyMetL > #progress-pane-overlay > #progress-container {
  position: absolute;
- top: 50%; left: 25%; right: 25%;
+ top: 40%; left: 25%; right: 25%;
  margin-top: -15px;
 }
 #HeavyMetL > #progress-pane-overlay > #progress-container > #progress-bar {
