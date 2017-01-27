@@ -129,6 +129,11 @@
  line-height: 30px;
  background: lightgrey; 
 }
+#HeavyMetL > #progress-pane-overlay > #progress-container > #progress-info {
+ width: 100%;
+ text-align: left;
+ line-height: 30px;
+}
 
 #HeavyMetL > #control-pane > div > a,
 #HeavyMetL > #graphics-pane-overlay > div > a,
