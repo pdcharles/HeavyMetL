@@ -1,6 +1,6 @@
 if (typeof HML == 'undefined') HML = {};
 
-HML.Modifications = {
+HML.modifications = {
   Carbamidomethyl : {
                       Carbon  : 2,
                       Hydrogen: 3,
@@ -13,6 +13,11 @@ HML.Modifications = {
   Acetyl          : {
                       Carbon  : 2,
                       Hydrogen: 2,
+                      Oxygen  : 1
+                    },
+  Deamidated      : {
+                      Hydrogen: -1,
+                      Nitrogen: -1,
                       Oxygen  : 1
                     }
 }

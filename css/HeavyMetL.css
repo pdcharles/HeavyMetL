@@ -6,7 +6,13 @@
  margin-bottom: 10px;
  position: absolute;
  top: 0; left: 0; bottom: 0; right: 0;
- font-family: Calibri;
+ font-family: Verdana;
+ font-size: 12pt;
+ -moz-user-select: none;
+ -webkit-user-select: none;
+ -ms-user-select: none;
+ user-select: none;
+ cursor: default;
 }
 
 #HeavyMetL > #control-pane,
@@ -23,7 +29,10 @@
  position: absolute;
  left: 0; top: 0; right: 0;
  height: 30px;
- overflow: scroll;
+ overflow: none;
+}
+#HeavyMetL > #control-pane::-webkit-scrollbar { 
+ display: none; 
 }
 #HeavyMetL > #control-pane > div {
  float: left;
@@ -76,16 +85,42 @@
 }
 #HeavyMetL > #results-pane > #results-table-container > table td {
  padding-left: 5px;
- cursor: pointer;
+ padding-right: 5px;
  border: 1px solid black;
  white-space: nowrap;
 }
-#HeavyMetL > #results-pane > #results-table-container > table > th > td {
+#HeavyMetL > #results-pane > #results-table-container > table tr.protein {
+ background: lightgrey;  
+}
+#HeavyMetL > #results-pane > #results-table-container > table > thead td {
  font-weight: bold;
 }
-#HeavyMetL > #results-pane > #results-table-container > table tr > td:nth-child(2) {
- max-width: 400px;
- overflow: hidden;
+#HeavyMetL > #results-pane > #results-table-container > table > thead > tr:not(.protein) {
+ border-bottom: 2px solid black;
+}
+
+#HeavyMetL > #results-pane > #results-table-container > table > tbody tr.nocontrib {
+ color: lightgrey;
+}
+#HeavyMetL > #results-pane > #results-table-container > table > tbody td {
+ cursor: pointer;
+}
+
+#HeavyMetL > #results-pane > #results-table-container > table > tbody > tr.protein > td:nth-child(2),
+#HeavyMetL > #results-pane > #results-table-container > table > tbody > tr.protein > td:nth-child(3),
+#HeavyMetL > #results-pane > #results-table-container > table > tbody > tr.protein > td:nth-child(4),
+#HeavyMetL > #results-pane > #results-table-container > table > tbody > tr:not(.protein) > td:nth-child(1),
+#HeavyMetL > #results-pane > #results-table-container > table > tbody > tr:not(.protein) > td:nth-child(3),
+#HeavyMetL > #results-pane > #results-table-container > table > tbody > tr:not(.protein) > td:nth-child(4) {
+ text-align: center;
+}
+
+#HeavyMetL > #results-pane > #results-table-container > table tr.protein > td:nth-child(2),
+#HeavyMetL > #results-pane > #results-table-container > table tr.protein > td:nth-child(3) {
+ min-width: 80px;
+}
+#HeavyMetL > #results-pane > #results-table-container > table tr:not(.protein) > td:nth-child(4) {
+ width: 70px;
 }
 
 #HeavyMetL > #graphics-pane-overlay {
@@ -105,9 +140,28 @@
  visibility: hidden;
  background: white; 
 }
-#HeavyMetL > #settings-pane {
+#HeavyMetL > #settings-pane-overlay > #settings-pane {
  position: absolute;
  top: 50; left: 50; bottom: 50; right: 50;
+}
+#HeavyMetL > #settings-pane-overlay > #settings-pane span.clearsResults {
+ color: red;
+}
+#HeavyMetL > #settings-pane-overlay > #settings-pane > #settings-help {
+ margin-top: 10px;
+ height: 50px;
+ width: 500px;
+ padding-left: 2px;
+ padding-right: 2px;
+ border: 1px solid black;
+ font-style: italic;
+ font-size: 9pt;
+}
+#HeavyMetL > #settings-pane-overlay > #settings-pane > #settings-note {
+ margin-top: 10px;
+ margin-bottom: 10px;
+ font-style: italic;
+ font-size: 9pt;
 }
 
 #HeavyMetL > #progress-pane-overlay {
@@ -149,9 +203,6 @@
  color: black;
  text-decoration: none;
  cursor: pointer;
- -moz-user-select: none;
- -webkit-user-select: none;
- -ms-user-select: none;
 }
 #HeavyMetL > #control-pane > div > a.disabled {
  cursor: not-allowed;

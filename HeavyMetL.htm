@@ -2,25 +2,30 @@
 <head>
  <title>HeavyMetL</title>
  <meta charset="UTF-8" />
- <script src="lib/distrib/fabric/fabric-1.5.0.min.js"></script>
  <!-- MSLIB -->
- <script src="lib/mslib/distrib/zlib/pako_inflate.1.0.3.min.js"></script>
- <script src="lib/mslib/MSLIB/Common.js"></script>
- <script src="lib/mslib/MSLIB/IsoCalc.js"></script>
- <script src="lib/mslib/MSLIB/Math.js"></script>
- <script src="lib/mslib/MSLIB/Data/Scan.js"></script>
- <script src="lib/mslib/MSLIB/Data/Spectrum.js"></script>
- <script src="lib/mslib/MSLIB/Data/Chromatogram.js"></script>
- <script src="lib/mslib/MSLIB/Format/MsDataFile.js"></script>
- <script src="lib/mslib/MSLIB/Format/MzFile.js"></script>
- <script src="lib/mslib/MSLIB/Format/ThermoRawFile.js"></script>
- <script src="lib/mslib/MSLIB/Format/TextTableFile.js"></script>
+ <script src="http://pdcharles.github.io/MSLIB/distrib/zlib/pako_inflate.1.0.3.min.js"></script>
+ <script src="http://pdcharles.github.io/MSLIB/js/Common.js"></script>
+ <script src="http://pdcharles.github.io/MSLIB/js/IsoCalc.js"></script>
+ <script src="http://pdcharles.github.io/MSLIB/js/Math.js"></script>
+ <script src="http://pdcharles.github.io/MSLIB/js/Data/Scan.js"></script>
+ <script src="http://pdcharles.github.io/MSLIB/js/Data/Spectrum.js"></script>
+ <script src="http://pdcharles.github.io/MSLIB/js/Data/Chromatogram.js"></script>
+ <script src="http://pdcharles.github.io/MSLIB/js/Format/MsDataFile.js"></script>
+ <script src="http://pdcharles.github.io/MSLIB/js/Format/MzFile.js"></script>
+ <script src="http://pdcharles.github.io/MSLIB/js/Format/ThermoRawFile.js"></script>
+ <script src="http://pdcharles.github.io/MSLIB/js/Format/TextTableFile.js"></script>
+ <!-- distrib -->
+ <script src="lib/distrib/fabric/fabric-1.7.15.min.js"></script>
  <!-- core -->
- <script src="lib/core/HML/Interface.js"></script>
- <script src="lib/core/HML/MsDataFileWorker.js"></script>
- <script src="lib/core/HML/QuantitationWorker.js"></script>
+ <script src="lib/core/HML/UI.js"></script>
+ <script src="lib/core/HML/Settings.js"></script>
+ <script src="lib/core/HML/QuantRequest.js"></script>
+ <script src="lib/core/HML/QuantTask.js"></script>
  <script src="lib/core/HML/TaskQueue.js"></script>
  <script src="lib/core/HML/ExtractionCalculator.js"></script>
+ <script src="lib/core/HML/MsDataFileWorker.js"></script>
+ <script src="lib/core/HML/QuantitationWorker.js"></script>
+ <script src="lib/core/HML/QuantifiedProtein.js"></script>
  <script src="lib/core/HML/Plot.js"></script>
  <!-- config -->
  <script src="cfg/config.js"></script>
@@ -31,9 +36,6 @@
  <link rel="icon" href="img/favicon.png" type="image/png" />
 </head>
 <body>
- <!--
- <input type="file" id="test">test</input>
- -->
  <div id="HeavyMetL">
 
   <div id="control-pane">
@@ -63,13 +65,13 @@
   </div>
 
   <div id="graphics-pane-overlay">
-   <div id="graphics-canvas-container">
-    <canvas id="graphics-canvas" />
-   </div>
    <div id="graphics-control-pane">
     <a id="save-as-png">Save as PNG</a>
     <a id="save-as-svg">Save as SVG</a>
     <a id="graphics-close">Close</a>
+   </div>
+   <div id="graphics-canvas-container">
+    <canvas id="graphics-canvas" />
    </div>
   </div>
 
@@ -77,8 +79,13 @@
    <div id="settings-pane">
     <div id="settings-contents">
     </div>
+    <div id="settings-help">
+    </div>
+    <div id="settings-note">
+     N.B. Altering <span class="clearsResults">highlighted parameters</span> will require quantitation to be re-calculated
+    </div>
     <a id="settings-cancel">Cancel</a>
-    <a id="settings-update">Update Settings & Clear Results</a>
+    <a id="settings-update">Save</a>
    </div>
   </div>
 
